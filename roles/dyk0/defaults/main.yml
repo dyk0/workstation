@@ -1,0 +1,14 @@
+user: "dyk0"
+home_dir: '{{ base_home }}/{{ user }}'
+
+go_download_location: "https://storage.googleapis.com/golang/{{ go_tarball }}"
+gopath: '{{ home_dir }}/work'
+gobase: '/usr/local/go'
+
+godeps:
+  - github.com/golang/lint
+  - github.com/nsf/gocode
+  - github.com/tools/godep
+  - github.com/rogpeppe/godef
+  - golang.org/x/tools/cmd/guru
+  - github.com/kisielk/errcheck

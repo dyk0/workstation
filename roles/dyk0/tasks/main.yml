@@ -1,0 +1,11 @@
+- include_vars: "{{ ansible_os_family }}.yml"
+
+- include: debian_dependencies.yml
+  when: ansible_os_family == "Debian"
+
+- include: keybase.yml  
+- include: go.yml
+- include: zsh.yml
+- include: screen.yml
+- include: vim.yml
+- include: tmux.yml
