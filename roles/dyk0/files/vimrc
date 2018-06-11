@@ -1,47 +1,65 @@
-execute pathogen#infect()
-set shell=/bin/bash
 set t_Co=256
+set shell=/bin/bash
+call plug#begin('~/.vim/plugged')
+
+Plug 'arcticicestudio/nord-vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'benmills/vimux'
+Plug 'cespare/vim-toml', {'for' : 'toml'}
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'corylanou/vim-present', {'for' : 'present'}
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
+Plug 'elzr/vim-json', {'for' : 'json'}
+Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
+Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
+Plug 'fatih/molokai'
+Plug 'garbas/vim-snipmate'
+Plug 'garyburd/go-explorer'
+Plug 'hashivim/vim-terraform'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'itchyny/lightline.vim'
+Plug 'JazzCore/ctrlp-cmatcher', {'do': './install.sh'}
+Plug 'klen/python-mode'
+Plug 'kchmck/vim-coffee-script', {'for' : 'coffee'}
+Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plug 'majutsushi/tagbar'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mhinz/vim-sayonara'
+Plug 'moll/vim-bbye'
+Plug 'morhetz/gruvbox'
+Plug 'pearofducks/ansible-vim'
+Plug 'Raimondi/delimitMate'
+Plug 'rking/ag.vim'
+Plug 'rhysd/vim-go-impl'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'Shougo/neocomplete'
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'tmux-plugins/vim-tmux'
+Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-scriptease'
+Plug 'Valloric/YouCompleteMe', { 'do': 'python ./install.py --gocode-completer' }
+Plug 'w0ng/vim-hybrid'
+Plug 'wlangstroth/vim-racket'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
 set nocompatible               " be iMproved
 let mapleader=","              " change the leader to be a comma vs slash
 filetype off                   " required!
-
-call plug#begin('~/.vim/plugged')
-
-Plug '/usr/local/opt/fzf'
-Plug 'junegunn/fzf.vim'
-call plug#end()
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'majutsushi/tagbar'
-Plugin 'scrooloose/nerdtree'
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'elixir-lang/vim-elixir'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'klen/python-mode'
-Plugin 'davidhalter/jedi-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'jnwhiteh/vim-golang'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'vim-airline/vim-airline'
-Plugin 'ervandew/supertab'
-Plugin 'kevinw/pyflakes-vim'
-Plugin 'yann2192/vim-vitamins'
-Plugin 'fatih/vim-go'
-Plugin 'chase/vim-ansible-yaml'
-Plugin 'tarekbecker/vim-yaml-formatter'
-" Snipmate
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'garbas/vim-snipmate'
-Plugin 'hashivim/vim-terraform'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'benmills/vimux'
-Plugin 'cocopon/iceberg.vim'
-call vundle#end()
-
 filetype plugin indent on     " required!
 
 " Python-mode
