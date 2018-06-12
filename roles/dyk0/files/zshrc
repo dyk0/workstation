@@ -13,3 +13,4 @@ alias avv="ansible-vault view"
 alias ave="ansible-vault edit"
 alias avc="ansible-vault create"
 alias ap="ansible-playbook"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
