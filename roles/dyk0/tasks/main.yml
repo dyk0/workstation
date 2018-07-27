@@ -2,7 +2,8 @@
 
 - include: debian_dependencies.yml
   when: ansible_os_family == "Debian"
-
+- include: arch_dependencies.yml
+  when: ansible_os_family == "Archlinux"
 - include: keybase.yml  
 - include: go.yml
 - include: zsh.yml

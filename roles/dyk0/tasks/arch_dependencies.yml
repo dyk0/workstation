@@ -1,0 +1,20 @@
+---
+- name: System Upgrade
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Install base packages
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ packages }}"
+
+- group:
+    name: sudo
+
+- user:
+    name: '{{ user }}'
+    shell: /usr/bin/zsh
+    groups: sudo,docker
+    append: yes

@@ -10,3 +10,10 @@
       deb: '{{ home_dir }}/keybase-latest-amd64.deb'
 
   when: ansible_os_family == "Debian"
+
+- block:
+  - name: Get keybase Arch
+    pacman:
+      name: keybase
+      state: present
+  when: ansible_os_family == "Archlinux"
